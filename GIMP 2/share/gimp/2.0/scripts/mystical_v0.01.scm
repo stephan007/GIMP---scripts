@@ -12,7 +12,7 @@
 ;	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;	v0.01 Mystical; Gimp v2.8.16
+;	v0.01a Mystical; Gimp v2.8.16
 ;	(de) http://www.3d-hobby-art.de/news/196-gimp-script-fu-mythical.html
 ;	(eng) http://www.3d-hobby-art.de/en/blog/197-gimp-script-fu-mythical.html
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
