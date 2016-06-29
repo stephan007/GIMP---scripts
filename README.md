@@ -18,7 +18,7 @@ More info on
 
 ![Skull before...](http://www.3d-hobby-art.de/images/blog.images/skull.before.png)
 
-![Skull after...](http://www.3d-hobby-art.de/images/blog.images/skull.png)
+![Skull after...](http://www.3d-hobby-art.de/images/blog.images/skull_after.png)
 
 ## #Changelog
 
