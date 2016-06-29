@@ -13,7 +13,7 @@
 ;	along with this program.  If not, see <http://www.gnu.org/licenses/>.								;;
 ;																										;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;	v0.02 Mystical; Gimp v2.8.16																		;;
+;;	v0.03 Mystical; Gimp v2.8.16																		;;
 ;;	(de) http://www.3d-hobby-art.de/news/196-gimp-script-fu-mythical.html								;;
 ;;	(eng) http://www.3d-hobby-art.de/en/blog/197-gimp-script-fu-mythical.html							;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -614,6 +614,23 @@
 		(python-layerfx-color-overlay (if (= inRunMode TRUE) (begin RUN-INTERACTIVE) RUN-NONINTERACTIVE) img color-layer '(255 230 230) 100 MULTIPLY-MODE FALSE)
 		(gimp-layer-set-name (car (gimp-image-get-layer-by-name img "color-with-color")) "Red Color (option)")
 		(gimp-layer-set-mode (car (gimp-image-get-layer-by-name img "Red Color (option)")) SOFTLIGHT-MODE)
+
+		;; 
+		;; ************************************************************************************************************************************
+		(set! object-layer-high-pass (car (gimp-layer-copy (car (gimp-image-get-layer-by-name img "faded off object")) 0)))
+		(gimp-image-insert-layer img object-layer-high-pass (car (gimp-image-get-layer-by-name img "main object -group")) 0)
+		(gimp-layer-set-opacity object-layer-high-pass 100)
+		(gimp-layer-set-name object-layer-high-pass "object (highPass)")
+		(set! object-layer-high-pass-dupl (car (gimp-layer-copy (car (gimp-image-get-layer-by-name img "object (highPass)")) 0)))
+		(gimp-image-insert-layer img object-layer-high-pass-dupl (car (gimp-image-get-layer-by-name img "main object -group")) 0)
+		(gimp-invert object-layer-high-pass-dupl)
+		(plug-in-gauss (if (= inRunMode TRUE) (begin RUN-INTERACTIVE) RUN-NONINTERACTIVE) img object-layer-high-pass-dupl (/ ImageWidth 80) (/ ImageWidth 80) 1)
+		(gimp-layer-set-opacity object-layer-high-pass-dupl 50)
+		(gimp-image-merge-down img object-layer-high-pass-dupl CLIP-TO-BOTTOM-LAYER)
+		(gimp-brightness-contrast (car (gimp-image-get-layer-by-name img "object (highPass)")) 0 90)
+		(gimp-desaturate-full (car (gimp-image-get-layer-by-name img "object (highPass)")) DESATURATE-AVERAGE)
+		(gimp-layer-set-mode (car (gimp-image-get-layer-by-name img "object (highPass)")) OVERLAY-MODE)
+
 
 		;;
 		;; ************************************************************************************************************************************
