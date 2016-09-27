@@ -18,8 +18,7 @@ More info on
 
 ## #Changelog
 
--2016-09-27 (v0.01)
-* first release
+-release 2016-09-27 (v0.01)
 
 
 ***
