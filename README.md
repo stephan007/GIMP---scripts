@@ -1,3 +1,30 @@
+# GIMP - script "Sci-fi"
+
+Sci-fi Script turns your photos into futuristic Sci-Fi composition.
+
+More info on
+
+* (de) [http://www.3d-hobby-art.de/news/200-gimp-script-fu-sci-fi.html](http://www.3d-hobby-art.de/news/200-gimp-script-fu-sci-fi.html)
+* (eng) [http://www.3d-hobby-art.de/en/blog/201-gimp-script-fu-sci-fi.html](http://www.3d-hobby-art.de/en/blog/201-gimp-script-fu-sci-fi.html)
+* the script in action ....  work in progress...
+
+### before / after
+
+![Skull before...](http://www.3d-hobby-art.de/images/blog.images/sci-fi.004.start.png)
+
+![Skull after...](http://www.3d-hobby-art.de/images/blog.images/sci-fi.004.final.png)
+
+***
+
+## #Changelog
+
+-2016-09-27 (v0.01)
+* first release
+
+
+
+***
+
 # GIMP - script "Mystical"
 
 Gimp script to create awesome atmospheric lighting and Mystical effect....
