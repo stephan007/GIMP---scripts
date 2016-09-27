@@ -10,9 +10,9 @@ More info on
 
 ### before / after
 
-![Skull before...](http://www.3d-hobby-art.de/images/blog.images/skull.sci-fi.004.start.png)
+![Skull before...](http://www.3d-hobby-art.de/images/blog.images/sci-fi.004.start.png)
 
-![Skull after...](http://www.3d-hobby-art.de/images/blog.images/skull.sci-fi.004.final.png)
+![Skull after...](http://www.3d-hobby-art.de/images/blog.images/sci-fi.004.final.png)
 
 ***
 
