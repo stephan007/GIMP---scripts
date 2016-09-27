@@ -1,4 +1,4 @@
-# GIMP - script "Sci-fi"
+# GIMP - script "Sci-Fi"
 
 Sci-fi Script turns your photos into futuristic Sci-Fi composition.
 
@@ -21,8 +21,11 @@ More info on
 -2016-09-27 (v0.01)
 * first release
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/master
 ***
 
 # GIMP - script "Mystical"
