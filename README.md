@@ -21,11 +21,7 @@ More info on
 -2016-09-27 (v0.01)
 * first release
 
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/master
 ***
 
 # GIMP - script "Mystical"
