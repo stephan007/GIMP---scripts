@@ -6,7 +6,7 @@ More info on
 
 * (de) [http://www.3d-hobby-art.de/news/200-gimp-script-fu-sci-fi.html](http://www.3d-hobby-art.de/news/200-gimp-script-fu-sci-fi.html)
 * (eng) [http://www.3d-hobby-art.de/en/blog/201-gimp-script-fu-sci-fi.html](http://www.3d-hobby-art.de/en/blog/201-gimp-script-fu-sci-fi.html)
-* the script in action ....  work in progress...
+* the script in action ....  [https://www.youtube.com/watch?v=ZmnK0ldVVpA#t=6m34s](https://www.youtube.com/watch?v=ZmnK0ldVVpA#t=6m34s)
 
 ### before / after
 
