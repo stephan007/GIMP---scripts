@@ -116,6 +116,8 @@
 			(noise-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "noise" 100 SCREEN-MODE)))
 			(color-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "color" 50 SOFTLIGHT-MODE)))
 			(seed)
+			(object-layer-high-pass)
+			(object-layer-high-pass-dupl)
 		)
 
 		;;
