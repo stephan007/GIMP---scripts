@@ -1,3 +1,28 @@
+# GIMP - script "Pixels!"
+
+Pixels! Script turns your photos into a retro Pixel composition.
+
+More info on
+
+* (de) [http://www.3d-hobby-art.de/news/202-gimp-script-fu-pixels.html](http://www.3d-hobby-art.de/news/202-gimp-script-fu-pixels.html)
+* (eng) [http://www.3d-hobby-art.de/en/blog/203-gimp-script-fu-pixels.html](http://www.3d-hobby-art.de/en/blog/203-gimp-script-fu-pixels.html)
+* the script in action ....  [#t=6m34s](#t=6m34s)
+
+### before / after
+
+![Pixels before...](http://www.3d-hobby-art.de/images/blog.images/pixels.start.png)
+
+![Pixels after...](http://www.3d-hobby-art.de/images/blog.images/pixels.final.png)
+
+***
+
+## #Changelog
+
+-release 2016-10-19 (v0.01)
+
+
+***
+
 # GIMP - script "Sci-Fi"
 
 Sci-fi Script turns your photos into futuristic Sci-Fi composition.
