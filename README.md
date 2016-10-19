@@ -6,7 +6,7 @@ More info on
 
 * (de) [http://www.3d-hobby-art.de/news/202-gimp-script-fu-pixels.html](http://www.3d-hobby-art.de/news/202-gimp-script-fu-pixels.html)
 * (eng) [http://www.3d-hobby-art.de/en/blog/203-gimp-script-fu-pixels.html](http://www.3d-hobby-art.de/en/blog/203-gimp-script-fu-pixels.html)
-* the script in action ....  [#t=6m34s](#t=6m34s)
+* the script in action ....  [https://www.youtube.com/watch?v=VegyFeEuga4#t=2m25s](https://www.youtube.com/watch?v=VegyFeEuga4#t=2m25s)
 
 ### before / after
 
