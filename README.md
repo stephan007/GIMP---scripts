@@ -1,3 +1,28 @@
+# GIMP - script "Pixelated!"
+
+This effect will break apart your photo into various sized pixel squares.
+
+More info on
+
+* (de) [http://www.3d-hobby-art.de/news/204-gimp-script-fu-pixelated-verpixelt.html](http://www.3d-hobby-art.de/news/204-gimp-script-fu-pixelated-verpixelt.html)
+* (eng) [http://www.3d-hobby-art.de/en/blog/205-gimp-script-fu-pixelated.html](http://www.3d-hobby-art.de/en/blog/205-gimp-script-fu-pixelated.html)
+* the script in action ....  [https://www.youtube.com/watch?v=nG31PIYV0Hc#t=8m08s](https://www.youtube.com/watch?v=nG31PIYV0Hc#t=8m08s)
+
+### before / after
+
+![Pixelated before...](http://www.3d-hobby-art.de/images/blog.images/pixelated.start.png)
+
+![Pixelated after...](http://www.3d-hobby-art.de/images/blog.images/pixelated.final.png)
+
+***
+
+## #Changelog
+
+-release 2016-11-12 (v0.01)
+
+
+***
+
 # GIMP - script "Pixels!"
 
 Pixels! Script turns your photos into a retro Pixel composition.
