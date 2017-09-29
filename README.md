@@ -4,8 +4,8 @@ Add special stone exploding effects to your photo.
 
 More info on
 
-* (de) [http://www.3d-hobby-art.de/news/204-gimp-script-fu-pixelated-verpixelt.html](http://www.3d-hobby-art.de/news/204-gimp-script-fu-pixelated-verpixelt.html)
-* (eng) [http://www.3d-hobby-art.de/en/blog/205-gimp-script-fu-pixelated.html](http://www.3d-hobby-art.de/en/blog/205-gimp-script-fu-pixelated.html)
+* (de) [http://www.3d-hobby-art.de/news/208-gimp-script-fu-explode.html](http://www.3d-hobby-art.de/news/208-gimp-script-fu-explode.html)
+* (eng) [http://www.3d-hobby-art.de/en/blog.html](http://www.3d-hobby-art.de/en/blog.html)
 * the script in action ....  [https://www.youtube.com/watch?v=nyZPzA_CRMQ#t=8m38s](https://www.youtube.com/watch?v=nyZPzA_CRMQ#t=8m38s)
 
 ### before / after
