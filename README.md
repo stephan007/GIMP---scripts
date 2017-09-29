@@ -1,3 +1,28 @@
+# GIMP - script "Explode"
+
+Add special stone exploding effects to your photo.
+
+More info on
+
+* (de) [http://www.3d-hobby-art.de/news/204-gimp-script-fu-pixelated-verpixelt.html](http://www.3d-hobby-art.de/news/204-gimp-script-fu-pixelated-verpixelt.html)
+* (eng) [http://www.3d-hobby-art.de/en/blog/205-gimp-script-fu-pixelated.html](http://www.3d-hobby-art.de/en/blog/205-gimp-script-fu-pixelated.html)
+* the script in action ....  [https://www.youtube.com/watch?v=nyZPzA_CRMQ#t=8m38s](https://www.youtube.com/watch?v=nyZPzA_CRMQ#t=8m38s)
+
+### before / after
+
+![Explode before...](http://www.3d-hobby-art.de/images/blog.images/skull.explode.start.png)
+
+![Explode after...](http://www.3d-hobby-art.de/images/blog.images/skull.explode.final.png)
+
+***
+
+## #Changelog
+
+-release 2017-09-24 (v0.01)
+
+
+***
+
 # GIMP - script "Pixelated!"
 
 This effect will break apart your photo into various sized pixel squares.
