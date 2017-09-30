@@ -13,21 +13,21 @@
 ;	along with this program.  If not, see <http://www.gnu.org/licenses/>.								;;
 ;																										;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;	v0.01 Explode; Gimp v2.8.18																		;;
-;;	(de) :::																							;;
-;;	(eng) :::																							;;
+;;	v0.01 Explode; Gimp v2.8.18																			;;
+;;	(de) http://www.3d-hobby-art.de/news/208-gimp-skript-fu-explode.html								;;
+;;	(eng) http://www.3d-hobby-art.de/en/blog/209-gimp-script-fu-explode.html							;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (script-fu-register
 	"script-fu-explode"													;func name
 	"Explode ..."														;menu label
-	"Add special effects to your photo."								;desc
+	"Add special stone explosion effects to your photo."				;desc
 	"Stephan W."
 	"(c) 2017, 3d-hobby-art.de"											;copyright notice
 	"September 01, 2017"												;date created
 	"RGBA , RGB"														;image type that the script works on
 	SF-IMAGE		"Image"						0
 	SF-DRAWABLE		"The layer"					0
-	SF-COLOR		_"Glow"					'(0 232 241)
+	SF-COLOR		_"Glow"						'(0 232 241)
 	SF-TOGGLE		"Run Interactive Mode?"		FALSE
 )
 (script-fu-menu-register "script-fu-explode" "<Image>/Script-Fu/Explode")

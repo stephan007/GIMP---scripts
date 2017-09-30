@@ -4,8 +4,8 @@ Add special stone exploding effects to your photo.
 
 More info on
 
-* (de) [http://www.3d-hobby-art.de/news/208-gimp-script-fu-explode.html](http://www.3d-hobby-art.de/news/208-gimp-script-fu-explode.html)
-* (eng) [http://www.3d-hobby-art.de/en/blog.html](http://www.3d-hobby-art.de/en/blog.html)
+* (de) [http://www.3d-hobby-art.de/news/208-gimp-skript-fu-explode.html](http://www.3d-hobby-art.de/news/208-gimp-skript-fu-explode.html)
+* (eng) [http://www.3d-hobby-art.de/en/blog/209-gimp-script-fu-explode.html](http://www.3d-hobby-art.de/en/blog/209-gimp-script-fu-explode.html)
 * the script in action ....  [https://www.youtube.com/watch?v=nyZPzA_CRMQ#t=8m38s](https://www.youtube.com/watch?v=nyZPzA_CRMQ#t=8m38s)
 
 ### before / after
@@ -18,7 +18,11 @@ More info on
 
 ## #Changelog
 
--release 2017-09-24 (v0.01)
+-2017-09-30 (v0.02)
+* + color preset
+* ^ code revised
+
+-release 2017-09-29 (v0.01)
 
 
 ***
@@ -130,6 +134,8 @@ More info on
 * ^ code revised
 
 -release 2016-06-19 (v0.01)
+
+***
 
 * * -> Security Fix
 * # -> Bug Fix
