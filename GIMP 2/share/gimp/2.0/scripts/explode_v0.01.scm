@@ -29,10 +29,11 @@
 	SF-DRAWABLE		"The layer"					0
 	SF-COLOR		_"Glow"						'(0 232 241)
 	SF-TOGGLE		"Run Interactive Mode?"		FALSE
+	SF-TOGGLE		"Undo Mode?"				FALSE
 )
 (script-fu-menu-register "script-fu-explode" "<Image>/Script-Fu/Explode")
 
-(define (script-fu-explode img drawable inGlowColor inRunMode)
+(define (script-fu-explode img drawable inGlowColor inRunMode inUndoMode)
 
 	;;
 	(define (gimp-message-and-quit message)
@@ -96,9 +97,13 @@
 		(if  ( = (car (gimp-image-get-layer-by-name img "brush-mask")) -1)
 			(gimp-message-and-quit "There is no \"brush-mask\" layer! Tutorial - please read. \n Keine \"brush-mask\" -Ebene gefunden! Bitte lesen Sie mein Tutorial.")
 		)
-
+		(if  ( = (car (gimp-procedural-db-proc-exists "python-layer-fx-outer-glow")) FALSE)
+			(gimp-message-and-quit "\"LayerFX\" (Python-Fu) for Gimp 2.8 not installed!! Tutorial - please read. \n  \"LayerFX\" (Python-Fu) für Gimp 2.8 nicht installiert. Bitte lesen Sie mein Tutorial.")
+		)
+		
 		;;	Start....
-		(gimp-image-undo-group-start img)
+		;;
+		(if (= inUndoMode TRUE) (begin (gimp-image-undo-group-start img)) )
 
 		(gimp-context-set-foreground '(0 0 0))
 		(gimp-context-set-background '(255 255 255))
@@ -1282,7 +1287,7 @@
 		;;
 		(gimp-palette-set-background old-bg)
 		(gimp-palette-set-foreground old-fg)
-		(gimp-image-undo-group-end img)
+		(if (= inUndoMode TRUE) (begin (gimp-image-undo-group-end img)) )
 
 		(gimp-displays-flush)
 		;;	END....
