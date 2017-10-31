@@ -1,3 +1,29 @@
+# GIMP - script "Glow Art!" Effect
+
+Glow Art! Gimp Script Turns your photo into a masterpiece of an Epic Glow art.
+
+More info on
+
+* (de) [http://www.3d-hobby-art.de/news/210-gimp-skript-fu-glow-art.html](http://www.3d-hobby-art.de/news/210-gimp-skript-fu-glow-art.html)
+* (eng) [http://www.3d-hobby-art.de/en/blog/211-gimp-script-fu-glow-art.html](http://www.3d-hobby-art.de/en/blog/211-gimp-script-fu-glow-art.html)
+* the script in action ....  [https://www.youtube.com/watch?v=qd0sQR-Way8#t=7m20s](https://www.youtube.com/watch?v=qd0sQR-Way8#t=7m20s)
+
+### before / after
+
+![Glow Art! before...](http://www.3d-hobby-art.de/images/blog.images/glow.art.start.png)
+
+![Glow Art! after...](http://www.3d-hobby-art.de/images/blog.images/glow.art.news.eng.png)
+
+***
+
+## #Changelog
+
+
+-release 2017-10-31 (v0.01)
+
+
+***
+
 # GIMP - script "Explode"
 
 Add special stone exploding effects to your photo.
