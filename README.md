@@ -10,9 +10,9 @@ More info on
 
 ### before / after
 
-![Panels Collage before...](http://www.3d-hobby-art.de/images/blog.images/panels_collage.final.en.png)
+![Panels Collage before...](http://www.3d-hobby-art.de/images/blog.images/panels_collage.start.en.png)
 
-![Panels Collage after...](http://www.3d-hobby-art.de/images/blog.images/panels_collage.start.en.png)
+![Panels Collage after...](http://www.3d-hobby-art.de/images/blog.images/panels_collage.final.en.png)
 
 ***
 
