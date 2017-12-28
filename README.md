@@ -1,5 +1,32 @@
 # GIMP - script "Glow Art!" Effect
 
+Transform your photo or image into a nice looking Vertical Panel Portrait.
+
+More info on
+
+* (de) [http://www.3d-hobby-art.de/news/214-gimp-skript-fu-vertikale-paneele-foto-collage.html](http://www.3d-hobby-art.de/news/214-gimp-skript-fu-vertikale-paneele-foto-collage.html)
+* (eng) [http://www.3d-hobby-art.de/en/blog/215-gimp-script-fu-vertical-photo-panels-effect.html](http://www.3d-hobby-art.de/en/blog/215-gimp-script-fu-vertical-photo-panels-effect.html)
+* the script in action ....  [https://www.youtube.com/watch?v=-T02tP1Tr2I#t=2m14s](https://www.youtube.com/watch?v=-T02tP1Tr2I#t=2m14s)
+
+### before / after
+
+![Panels Collage before...](http://www.3d-hobby-art.de/images/blog.images/panels_collage.final.en.png)
+
+![Panels Collage after...](http://www.3d-hobby-art.de/images/blog.images/panels_collage.start.en.png)
+
+***
+
+## #Changelog
+
+
+-release 2017-12-28 (v0.01)
+
+
+***
+
+
+# GIMP - script "Glow Art!" Effect
+
 Glow Art! Gimp Script Turns your photo into a masterpiece of an Epic Glow art.
 
 More info on
