@@ -4,8 +4,8 @@ Transform your photo or image into a nice looking Vertical Panel Portrait.
 
 More info on
 
-* (de) [http://www.3d-hobby-art.de/news/214-gimp-skript-fu-vertikale-paneele-foto-collage.html](http://www.3d-hobby-art.de/news/214-gimp-skript-fu-vertikale-paneele-foto-collage.html)
-* (eng) [http://www.3d-hobby-art.de/en/blog/215-gimp-script-fu-vertical-photo-panels-effect.html](http://www.3d-hobby-art.de/en/blog/215-gimp-script-fu-vertical-photo-panels-effect.html)
+* (de) [http://www.3d-hobby-art.de/projekte/214-gimp-skript-fu-vertikale-paneele-foto-collage.html](http://www.3d-hobby-art.de/projekte/214-gimp-skript-fu-vertikale-paneele-foto-collage.html)
+* (eng) [http://www.3d-hobby-art.de/en/projects/215-gimp-script-fu-vertical-photo-panels-effect.html](http://www.3d-hobby-art.de/en/projects/215-gimp-script-fu-vertical-photo-panels-effect.html)
 * the script in action ....  [https://www.youtube.com/watch?v=-T02tP1Tr2I#t=2m14s](https://www.youtube.com/watch?v=-T02tP1Tr2I#t=2m14s)
 
 ### before / after
@@ -31,8 +31,8 @@ Glow Art! Gimp Script Turns your photo into a masterpiece of an Epic Glow art.
 
 More info on
 
-* (de) [http://www.3d-hobby-art.de/news/210-gimp-skript-fu-glow-art.html](http://www.3d-hobby-art.de/news/210-gimp-skript-fu-glow-art.html)
-* (eng) [http://www.3d-hobby-art.de/en/blog/211-gimp-script-fu-glow-art.html](http://www.3d-hobby-art.de/en/blog/211-gimp-script-fu-glow-art.html)
+* (de) [http://www.3d-hobby-art.de/projekte/210-gimp-skript-fu-glow-art.html](http://www.3d-hobby-art.de/projekte/210-gimp-skript-fu-glow-art.html)
+* (eng) [http://www.3d-hobby-art.de/en/projects/211-gimp-script-fu-glow-art.html](http://www.3d-hobby-art.de/en/projects/211-gimp-script-fu-glow-art.html)
 * the script in action ....  [https://www.youtube.com/watch?v=qd0sQR-Way8#t=7m20s](https://www.youtube.com/watch?v=qd0sQR-Way8#t=7m20s)
 
 ### before / after
@@ -57,8 +57,8 @@ Add special stone exploding effects to your photo.
 
 More info on
 
-* (de) [http://www.3d-hobby-art.de/news/208-gimp-skript-fu-explode.html](http://www.3d-hobby-art.de/news/208-gimp-skript-fu-explode.html)
-* (eng) [http://www.3d-hobby-art.de/en/blog/209-gimp-script-fu-explode.html](http://www.3d-hobby-art.de/en/blog/209-gimp-script-fu-explode.html)
+* (de) [http://www.3d-hobby-art.de/projekte/208-gimp-skript-fu-explode.html](http://www.3d-hobby-art.de/projekte/208-gimp-skript-fu-explode.html)
+* (eng) [http://www.3d-hobby-art.de/en/projects/209-gimp-script-fu-explode.html](http://www.3d-hobby-art.de/en/projects/209-gimp-script-fu-explode.html)
 * the script in action ....  [https://www.youtube.com/watch?v=nyZPzA_CRMQ#t=8m38s](https://www.youtube.com/watch?v=nyZPzA_CRMQ#t=8m38s)
 
 ### before / after
@@ -86,8 +86,8 @@ This effect will break apart your photo into various sized pixel squares.
 
 More info on
 
-* (de) [http://www.3d-hobby-art.de/news/204-gimp-script-fu-pixelated-verpixelt.html](http://www.3d-hobby-art.de/news/204-gimp-script-fu-pixelated-verpixelt.html)
-* (eng) [http://www.3d-hobby-art.de/en/blog/205-gimp-script-fu-pixelated.html](http://www.3d-hobby-art.de/en/blog/205-gimp-script-fu-pixelated.html)
+* (de) [http://www.3d-hobby-art.de/projekte/204-gimp-script-fu-pixelated-verpixelt.html](http://www.3d-hobby-art.de/projekte/204-gimp-script-fu-pixelated-verpixelt.html)
+* (eng) [http://www.3d-hobby-art.de/en/projects/205-gimp-script-fu-pixelated.html](http://www.3d-hobby-art.de/en/projects/205-gimp-script-fu-pixelated.html)
 * the script in action ....  [https://www.youtube.com/watch?v=nG31PIYV0Hc#t=8m08s](https://www.youtube.com/watch?v=nG31PIYV0Hc#t=8m08s)
 
 ### before / after
@@ -111,8 +111,8 @@ Pixels! Script turns your photos into a retro Pixel composition.
 
 More info on
 
-* (de) [http://www.3d-hobby-art.de/news/202-gimp-script-fu-pixels.html](http://www.3d-hobby-art.de/news/202-gimp-script-fu-pixels.html)
-* (eng) [http://www.3d-hobby-art.de/en/blog/203-gimp-script-fu-pixels.html](http://www.3d-hobby-art.de/en/blog/203-gimp-script-fu-pixels.html)
+* (de) [http://www.3d-hobby-art.de/projekte/202-gimp-script-fu-pixels.html](http://www.3d-hobby-art.de/projekte/202-gimp-script-fu-pixels.html)
+* (eng) [http://www.3d-hobby-art.de/en/projects/203-gimp-script-fu-pixels.html](http://www.3d-hobby-art.de/en/projects/203-gimp-script-fu-pixels.html)
 * the script in action ....  [https://www.youtube.com/watch?v=VegyFeEuga4#t=2m25s](https://www.youtube.com/watch?v=VegyFeEuga4#t=2m25s)
 
 ### before / after
@@ -136,8 +136,8 @@ Sci-fi Script turns your photos into futuristic Sci-Fi composition.
 
 More info on
 
-* (de) [http://www.3d-hobby-art.de/news/200-gimp-script-fu-sci-fi.html](http://www.3d-hobby-art.de/news/200-gimp-script-fu-sci-fi.html)
-* (eng) [http://www.3d-hobby-art.de/en/blog/201-gimp-script-fu-sci-fi.html](http://www.3d-hobby-art.de/en/blog/201-gimp-script-fu-sci-fi.html)
+* (de) [http://www.3d-hobby-art.de/projekte/200-gimp-script-fu-sci-fi.html](http://www.3d-hobby-art.de/projekte/200-gimp-script-fu-sci-fi.html)
+* (eng) [http://www.3d-hobby-art.de/en/projects/201-gimp-script-fu-sci-fi.html](http://www.3d-hobby-art.de/en/projects/201-gimp-script-fu-sci-fi.html)
 * the script in action ....  [https://www.youtube.com/watch?v=ZmnK0ldVVpA#t=6m34s](https://www.youtube.com/watch?v=ZmnK0ldVVpA#t=6m34s)
 
 ### before / after
@@ -161,8 +161,8 @@ Gimp script to create awesome atmospheric lighting and Mystical effect....
 
 More info on
 
-* (de) [http://www.3d-hobby-art.de/news/196-gimp-script-fu-mythical.html](http://www.3d-hobby-art.de/news/196-gimp-script-fu-mythical.html)
-* (eng) [http://www.3d-hobby-art.de/en/blog/197-gimp-script-fu-mythical.html](http://www.3d-hobby-art.de/en/blog/197-gimp-script-fu-mythical.html)
+* (de) [http://www.3d-hobby-art.de/projekte/196-gimp-script-fu-mythical.html](http://www.3d-hobby-art.de/projekte/196-gimp-script-fu-mythical.html)
+* (eng) [http://www.3d-hobby-art.de/en/projects/197-gimp-script-fu-mythical.html](http://www.3d-hobby-art.de/en/projects/197-gimp-script-fu-mythical.html)
 * the script in action ....  [https://youtu.be/YVgiyZNXZSI](https://youtu.be/YVgiyZNXZSI)
 
 ### before / after
