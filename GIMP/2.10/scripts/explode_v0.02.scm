@@ -13,13 +13,13 @@
 ;	along with this program.  If not, see <http://www.gnu.org/licenses/>.								;;
 ;																										;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;	v0.01 Explode; Gimp v2.8.18																			;;
-;;	(de) http://www.3d-hobby-art.de/news/208-gimp-skript-fu-explode.html								;;
-;;	(eng) http://www.3d-hobby-art.de/en/blog/209-gimp-script-fu-explode.html							;;
+;;	v0.02 Explode (free); Gimp v2.10																	;;
+;;	(de) http://www.3d-hobby-art.de/projekte/208-gimp-skript-fu-explode.html							;;
+;;	(eng) http://www.3d-hobby-art.de/en/projects/209-gimp-script-fu-explode.html						;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (script-fu-register
 	"script-fu-explode"													;func name
-	"Explode ..."														;menu label
+	"Explode (free) ..."												;menu label
 	"Add special stone explosion effects to your photo."				;desc
 	"Stephan W."
 	"(c) 2017, 3d-hobby-art.de"											;copyright notice
@@ -57,21 +57,21 @@
 			(old-bg (car (gimp-context-get-background)))
 			(old-fg (car (gimp-context-get-foreground)))
 			
-			(fill-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "background-color" 100 NORMAL)))
+			(fill-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "background-color" 100 0)))
 			
 			(clouds-diff-layer (car (gimp-layer-new img ImageWidth ImageHeight (car (gimp-drawable-type-with-alpha drawable)) "clouds diff" 100 DIFFERENCE-MODE)))
 			
 			
-			(cracks-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "object outer cracks" 100 NORMAL)))
-			(fill-glow-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "object inner cracks -glow" 100 NORMAL)))
+			(cracks-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "object outer cracks" 100 0)))
+			(fill-glow-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "object inner cracks -glow" 100 0)))
 			(cracks-layer-mask)
 			
-			(copy-visible-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "copy-visible" 100 NORMAL)))
-			(copy-visible-layer2 (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "Layer 9" 100 NORMAL)))
+			(copy-visible-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "copy-visible" 100 0)))
+			(copy-visible-layer2 (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "Layer 9" 100 0)))
 			(layer-mask)
 			(stones-group (car (gimp-layer-group-new img)))
 			
-			(dots-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "Dots" 100 NORMAL)))
+			(dots-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "Dots" 100 0)))
 			(dots-layer-group (car (gimp-layer-group-new img)))
 			
 			(cracks-layer-group (car (gimp-layer-group-new img)))
@@ -84,7 +84,7 @@
 			(object-layer-high-pass)
 			(object-layer-high-pass-dupl)
 			
-			(texture-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "bg_t_1" 100 NORMAL)))
+			(texture-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "bg_t_1" 100 0)))
 			(texture1-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "bg_t_5" 100 HARDLIGHT-MODE)))
 			(texture-group (car (gimp-layer-group-new img)))
 		)
@@ -284,7 +284,7 @@
 		;;	
 		;; ************************************************************************************************************************************
 		(gimp-item-set-name texture-group "Texture Group")
-		(gimp-layer-set-mode texture-group NORMAL-MODE)
+		(gimp-layer-set-mode texture-group 0)
 		(gimp-layer-set-opacity texture-group 100)
 		(gimp-image-insert-layer img texture-group 0 3)
 		
@@ -422,7 +422,7 @@
 		
 		
 		
-		;	Cracks red Glow
+		;
 		; ************************************************************************************************************************************
 		(gimp-image-insert-layer img fill-glow-layer 0 3)
 		(gimp-context-set-foreground inGlowColor)
@@ -793,37 +793,15 @@
 			(gimp-layer-resize-to-image-size varDupLayer8)
 			(plug-in-gauss RUN-NONINTERACTIVE img varDupLayer8 22 22 1)
 			(gimp-layer-set-name varDupLayer8 "stones _8")
-			
-			;; 
-			(gimp-selection-layer-alpha (car (gimp-image-get-layer-by-name img "brush-mask-scale 2")))
-			(gimp-selection-invert img)
-			(set! layer-mask (car (gimp-layer-create-mask (car (gimp-image-get-layer-by-name img "stones _3")) ADD-SELECTION-MASK)))
-			(gimp-image-add-layer-mask img (car (gimp-image-get-layer-by-name img "stones _3")) layer-mask)
-			(set! layer-mask (car (gimp-layer-create-mask (car (gimp-image-get-layer-by-name img "stones _4")) ADD-SELECTION-MASK)))
-			(gimp-image-add-layer-mask img (car (gimp-image-get-layer-by-name img "stones _4")) layer-mask)
-			(set! layer-mask (car (gimp-layer-create-mask (car (gimp-image-get-layer-by-name img "stones _5")) ADD-SELECTION-MASK)))
-			(gimp-image-add-layer-mask img (car (gimp-image-get-layer-by-name img "stones _5")) layer-mask)
-			(set! layer-mask (car (gimp-layer-create-mask (car (gimp-image-get-layer-by-name img "stones _6")) ADD-SELECTION-MASK)))
-			(gimp-image-add-layer-mask img (car (gimp-image-get-layer-by-name img "stones _6")) layer-mask)
-			(set! layer-mask (car (gimp-layer-create-mask (car (gimp-image-get-layer-by-name img "stones _7")) ADD-SELECTION-MASK)))
-			(gimp-image-add-layer-mask img (car (gimp-image-get-layer-by-name img "stones _7")) layer-mask)
-			(set! layer-mask (car (gimp-layer-create-mask (car (gimp-image-get-layer-by-name img "stones _8")) ADD-SELECTION-MASK)))
-			(gimp-image-add-layer-mask img (car (gimp-image-get-layer-by-name img "stones _8")) layer-mask)
-			(set! layer-mask (car (gimp-layer-create-mask (car (gimp-image-get-layer-by-name img "stones _9")) ADD-SELECTION-MASK)))
-			(gimp-image-add-layer-mask img (car (gimp-image-get-layer-by-name img "stones _9")) layer-mask)
-			(set! layer-mask (car (gimp-layer-create-mask (car (gimp-image-get-layer-by-name img "stones _10")) ADD-SELECTION-MASK)))
-			(gimp-image-add-layer-mask img (car (gimp-image-get-layer-by-name img "stones _10")) layer-mask)
-			(set! layer-mask (car (gimp-layer-create-mask (car (gimp-image-get-layer-by-name img "stones _11")) ADD-SELECTION-MASK)))
-			(gimp-image-add-layer-mask img (car (gimp-image-get-layer-by-name img "stones _11")) layer-mask)
-			(set! layer-mask (car (gimp-layer-create-mask (car (gimp-image-get-layer-by-name img "stones _12")) ADD-SELECTION-MASK)))
-			(gimp-image-add-layer-mask img (car (gimp-image-get-layer-by-name img "stones _12")) layer-mask)
-			(gimp-selection-none img)
+
 		)
+		
+		(gimp-image-remove-layer img (car (gimp-image-get-layer-by-name img "stones _4b")))
 		
 		;;	
 		;; ************************************************************************************************************************************
 		(gimp-item-set-name stones-group "Stones Group")
-		(gimp-layer-set-mode stones-group NORMAL-MODE)
+		(gimp-layer-set-mode stones-group 0)
 		(gimp-layer-set-opacity stones-group 100)
 		(gimp-image-insert-layer img stones-group 0 3)
 
@@ -831,7 +809,6 @@
 		(gimp-image-reorder-item img (car (gimp-image-get-layer-by-name img "stones _2")) (car (gimp-image-get-layer-by-name img "Stones Group")) 0)
 		(gimp-image-reorder-item img (car (gimp-image-get-layer-by-name img "stones _3")) (car (gimp-image-get-layer-by-name img "Stones Group")) 0)
 		(gimp-image-reorder-item img (car (gimp-image-get-layer-by-name img "stones _4")) (car (gimp-image-get-layer-by-name img "Stones Group")) 0)
-		(gimp-image-reorder-item img (car (gimp-image-get-layer-by-name img "stones _4b")) (car (gimp-image-get-layer-by-name img "Stones Group")) 0)
 		(gimp-image-reorder-item img (car (gimp-image-get-layer-by-name img "stones _5")) (car (gimp-image-get-layer-by-name img "Stones Group")) 0)
 		(gimp-image-reorder-item img (car (gimp-image-get-layer-by-name img "stones _6")) (car (gimp-image-get-layer-by-name img "Stones Group")) 0)
 		(gimp-image-reorder-item img (car (gimp-image-get-layer-by-name img "stones _7")) (car (gimp-image-get-layer-by-name img "Stones Group")) 0)
@@ -840,9 +817,17 @@
 		(gimp-image-reorder-item img (car (gimp-image-get-layer-by-name img "stones _10")) (car (gimp-image-get-layer-by-name img "Stones Group")) 0)
 		(gimp-image-reorder-item img (car (gimp-image-get-layer-by-name img "stones _11")) (car (gimp-image-get-layer-by-name img "Stones Group")) 0)
 		(gimp-image-reorder-item img (car (gimp-image-get-layer-by-name img "stones _12")) (car (gimp-image-get-layer-by-name img "Stones Group")) 0)
+		
+		;; add masks to group stones
+		(gimp-selection-layer-alpha (car (gimp-image-get-layer-by-name img "brush-mask-scale 2")))
+		(gimp-selection-invert img)
+		
+		(let ((layer-mask (car (gimp-layer-create-mask stones-group ADD-SELECTION-MASK))))
+			(gimp-layer-add-mask stones-group layer-mask)
+		)
+		(gimp-selection-none img)
 		;;	
 		;; ************************************************************************************************************************************
-		
 		
 
 		;	
@@ -909,7 +894,7 @@
 			)
 			(gimp-image-insert-layer img varDupLayer 0 3)
 			(gimp-image-remove-layer-mask img varDupLayer MASK-APPLY)
-			(gimp-layer-set-mode varDupLayer NORMAL)
+			(gimp-layer-set-mode varDupLayer 0)
 			(gimp-selection-layer-alpha varDupLayer)
 			(gimp-selection-grow img 3)
 			(gimp-context-set-foreground '(0 0 0))
@@ -922,7 +907,7 @@
 		)
 		; 	
 		(gimp-item-set-name dots-layer-group "Dots Group")
-		(gimp-layer-set-mode dots-layer-group NORMAL-MODE)
+		(gimp-layer-set-mode dots-layer-group 0)
 		(gimp-layer-set-opacity dots-layer-group 75)
 		(gimp-image-insert-layer img dots-layer-group 0 7)
 		
@@ -1099,7 +1084,7 @@
 
 		; 	
 		(gimp-item-set-name cracks-layer-group "Cracks")
-		(gimp-layer-set-mode cracks-layer-group NORMAL-MODE)
+		(gimp-layer-set-mode cracks-layer-group 0)
 		(gimp-layer-set-opacity cracks-layer-group 100)
 		(gimp-image-insert-layer img cracks-layer-group 0 17)
 		(gimp-image-reorder-item img (car (gimp-image-get-layer-by-name img "object inner cracks -duplicate (set opacity !!)")) (car (gimp-image-get-layer-by-name img "Cracks")) 0)
@@ -1137,7 +1122,7 @@
 		
 		;;	
 		(gimp-item-set-name object-brush-layer-group "Brush Object")
-		(gimp-layer-set-mode object-brush-layer-group NORMAL-MODE)
+		(gimp-layer-set-mode object-brush-layer-group 0)
 		(gimp-layer-set-opacity object-brush-layer-group 100)
 		(gimp-image-insert-layer img object-brush-layer-group 0 9)
 		

@@ -13,16 +13,16 @@
 ;	along with this program.  If not, see <http://www.gnu.org/licenses/>.								;;
 ;																										;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;	v0.01 Pixels!; Gimp v2.8.18																			;;
+;;	v0.02 Pixels!; Gimp v2.10																			;;
 ;;	(de) http://www.3d-hobby-art.de/news/202-gimp-script-fu-pixels.html									;;
 ;;	(eng) http://www.3d-hobby-art.de/en/blog/203-gimp-script-fu-pixels.html								;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (script-fu-register
 	"script-fu-pixels"														;func name
-	"Pixels! ..."															;menu label
+	"Pixels! (free) ..."															;menu label
 	"Pixels! Script turns your photos into a retro Pixel composition."		;desc
 	"Stephan W."
-	"Stephan Wittling; (c) 2016, 3d-hobby-art.de"							;copyright notice
+	"(c) 2016, 3d-hobby-art.de"							;copyright notice
 	"October 03, 2016"														;date created
 	"RGBA, RGB"																;image type that the script works on
 	SF-IMAGE		"Image"						0
@@ -56,12 +56,12 @@
 			(old-fg (car (gimp-context-get-foreground)))
 			(ImageWidth  (car (gimp-image-width  img)))
 			(ImageHeight (car (gimp-image-height img)))
-			(pixel-select-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "pixel select (tmp)" 100 NORMAL)))
-			(fill-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "background-color" 100 NORMAL)))
-			(pixel-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "pixels! (tmp)" 100 NORMAL)))
+			(pixel-select-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "pixel select (tmp)" 100 0)))
+			(fill-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "background-color" 100 0)))
+			(pixel-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "pixels! (tmp)" 100 0)))
 			(pixel-group (car (gimp-layer-group-new img)))
-			(pixels-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "pixels!" 100 NORMAL)))
-			(pixels-layer2 (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "pixels! #5" 100 NORMAL)))
+			(pixels-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "pixels!" 100 0)))
+			(pixels-layer2 (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "pixels! #5" 100 0)))
 			(lines-wave-glitch-mask)
 			(lines-wave-3-mask)
 			(lines-wave-2-mask)
@@ -156,11 +156,11 @@
 				(varDupLayer (car (gimp-layer-copy (car (gimp-image-get-active-layer img)) 1)))
 			)
 			(gimp-image-insert-layer img varDupLayer 0 -1)
-			(plug-in-mblur (if (= inRunMode TRUE) (begin RUN-INTERACTIVE) RUN-NONINTERACTIVE) img varDupLayer LINEAR (/ ImageWidth 8) 180 (/ ImageWidth 2) (/ ImageHeight 2))
+			(plug-in-mblur (if (= inRunMode TRUE) (begin RUN-INTERACTIVE) RUN-NONINTERACTIVE) img varDupLayer 0 (/ ImageWidth 8) 180 (/ ImageWidth 2) (/ ImageHeight 2))
 			(gimp-layer-set-name varDupLayer "lines blured 2b")
 		)
 
-		(plug-in-mblur (if (= inRunMode TRUE) (begin RUN-INTERACTIVE) RUN-NONINTERACTIVE) img (car (gimp-image-get-layer-by-name img "lines blured 2")) LINEAR (/ ImageWidth 8) 0 (/ ImageWidth 2) (/ ImageHeight 2))
+		(plug-in-mblur (if (= inRunMode TRUE) (begin RUN-INTERACTIVE) RUN-NONINTERACTIVE) img (car (gimp-image-get-layer-by-name img "lines blured 2")) 0 (/ ImageWidth 8) 0 (/ ImageWidth 2) (/ ImageHeight 2))
 		(gimp-image-merge-down img (car (gimp-image-get-layer-by-name img "lines blured 2b")) CLIP-TO-BOTTOM-LAYER)
 		(gimp-context-set-feather 0)
 		(gimp-selection-layer-alpha (car (gimp-image-get-layer-by-name img "lines blured 2")))
@@ -175,10 +175,10 @@
 				(varDupLayer (car (gimp-layer-copy (car (gimp-image-get-active-layer img)) 1)))
 			)
 			(gimp-image-insert-layer img varDupLayer 0 -1)
-			(plug-in-mblur (if (= inRunMode TRUE) (begin RUN-INTERACTIVE) RUN-NONINTERACTIVE) img varDupLayer LINEAR (/ ImageWidth (+ (rand 4.5) 1)) 180 (/ ImageWidth 2) (/ ImageHeight 2))
+			(plug-in-mblur (if (= inRunMode TRUE) (begin RUN-INTERACTIVE) RUN-NONINTERACTIVE) img varDupLayer 0 (/ ImageWidth (+ (rand 4.5) 1)) 180 (/ ImageWidth 2) (/ ImageHeight 2))
 			(gimp-layer-set-name varDupLayer "lines blured 2c")
 		)
-		(plug-in-mblur (if (= inRunMode TRUE) (begin RUN-INTERACTIVE) RUN-NONINTERACTIVE) img (car (gimp-image-get-layer-by-name img "lines blured")) LINEAR (/ ImageWidth (+ (rand 4.5) 1)) 0 (/ ImageWidth 2) (/ ImageHeight 2))
+		(plug-in-mblur (if (= inRunMode TRUE) (begin RUN-INTERACTIVE) RUN-NONINTERACTIVE) img (car (gimp-image-get-layer-by-name img "lines blured")) 0 (/ ImageWidth (+ (rand 4.5) 1)) 0 (/ ImageWidth 2) (/ ImageHeight 2))
 		(gimp-image-merge-down img (car (gimp-image-get-layer-by-name img "lines blured 2c")) CLIP-TO-BOTTOM-LAYER)
 		(gimp-context-set-feather 0)
 		(gimp-selection-layer-alpha (car (gimp-image-get-layer-by-name img "lines blured")))

@@ -13,13 +13,13 @@
 ;	along with this program.  If not, see <http://www.gnu.org/licenses/>.								;;
 ;																										;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;	v0.01 Panels Collage; Gimp v2.8.22																	;;
+;;	v0.02 Panels Collage; Gimp v2.10																	;;
 ;;	(de) http://www.3d-hobby-art.de/news/214-gimp-skript-fu-vertikale-paneele-foto-collage.html			;;
 ;;	(eng) http://www.3d-hobby-art.de/en/blog/215-gimp-script-fu-vertical-photo-panels-effect.html		;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (script-fu-register
 	"script-fu-panels-collage"													;func name
-	"Panels Collage Effect"														;menu label
+	"Panels Collage Effect (free) ..."														;menu label
 	"transform your photo or image into a nice looking Vertical Panel Portrait"	;desc
 	"Stephan W."
 	"(c) 2017, 3d-hobby-art.de"													;copyright notice

@@ -13,16 +13,16 @@
 ;	along with this program.  If not, see <http://www.gnu.org/licenses/>.								;;
 ;																										;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;	v0.01 Code Art!; Gimp v2.8.22																		;;
+;;	v0.02 Glow Art!; Gimp v2.10																			;;
 ;;	(de)	http://www.3d-hobby-art.de/news/210-gimp-skript-fu-glow-art.html							;;
-;;	(eng)	http://www.3d-hobby-art.de/en/blog/211-gimp-script-fu-glow-art.html							;;
+;;	(eng)	https://www.3d-hobby-art.de/en/projects/211-gimp-script-fu-glow-art.html					;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (script-fu-register
 	"script-fu-glowart"																		;func name
-	"Glow Art! ..."																			;menu label
+	"Glow Art! (free) ..."																	;menu label
 	"Glow Art! Gimp Script Turns your photo into a masterpiece of an Epic Glow art."		;desc
 	"Stephan W."
-	"Stephan W.; (c) 2017, 3d-hobby-art.de"													;;	copyright notice
+	"(c) 2017, 3d-hobby-art.de"																;;	copyright notice
 	"October 27, 2017"																		;;	date created
 	"RGBA, RGB"																				;;	image type that the script works on
 	SF-IMAGE		"Image"						0
@@ -74,18 +74,18 @@
 			(bg-layer (car (gimp-image-get-layer-by-name img "background")))
 			(brush-layer (car (gimp-image-get-layer-by-name img "brush")))
 			
-			(new-layer-marker (car (gimp-layer-new img 100 100 RGBA-IMAGE "marker (tmp)" 100 NORMAL)))
+			(new-layer-marker (car (gimp-layer-new img 100 100 RGBA-IMAGE "marker (tmp)" 100 0)))
 			
 			(ImageWidth  (car (gimp-image-width  img)))
 			(ImageHeight (car (gimp-image-height img)))
 			(old-bg (car (gimp-context-get-background)))
 			(old-fg (car (gimp-context-get-foreground)))
 			
-			(fill-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "background-color" 100 NORMAL)))
-			(fill-black-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "black-bg" 100 NORMAL)))
+			(fill-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "background-color" 100 0)))
+			(fill-black-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "black-bg" 100 0)))
 			(noise-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "noise" 80 HARDLIGHT-MODE)))
 			
-			(cracks-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "cracks" 100 NORMAL)))
+			(cracks-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "cracks" 100 0)))
 			(clouds-diff-layer (car (gimp-layer-new img ImageWidth ImageHeight (car (gimp-drawable-type-with-alpha drawable)) "clouds diff" 100 DIFFERENCE-MODE)))
 			(layer-mask 0)
 			
@@ -195,7 +195,7 @@
 			(set! base-y (cadr (gimp-drawable-offsets base-layer)))
 			(set! base-width  (car (gimp-drawable-width  base-layer)))
 			(set! base-height (car (gimp-drawable-height base-layer)))
-			(python-layer-fx-gradient-overlay RUN-NONINTERACTIVE img varDupLayer (if (= inLanguage 0) "FG to Transparent" (if (= inLanguage 1) "VG nach Transparent")) GRADIENT-RADIAL REPEAT-NONE FALSE 100 NORMAL-MODE (- (+ base-x (/ base-width  2)) (/ 100  2)) (- (+ base-y (/ base-height 2)) (/ 100 2)) 90 (* (car (gimp-drawable-height varDupLayer)) 0.95) FALSE)
+			(python-layer-fx-gradient-overlay RUN-NONINTERACTIVE img varDupLayer (if (= inLanguage 0) "FG to Transparent" (if (= inLanguage 1) "VG nach Transparent")) GRADIENT-RADIAL REPEAT-NONE FALSE 100 0 (- (+ base-x (/ base-width  2)) (/ 100  2)) (- (+ base-y (/ base-height 2)) (/ 100 2)) 90 (* (car (gimp-drawable-height varDupLayer)) 0.95) FALSE)
 			(gimp-image-reorder-item img (car (gimp-image-get-layer-by-name img (if (= inLanguage 0) "background copy-gradient" (if (= inLanguage 1) "background-Kopie-gradient")) )) 0 -1)
 			(gimp-image-remove-layer img (car (gimp-image-get-layer-by-name img (if (= inLanguage 0) "background copy-with-gradient" (if (= inLanguage 1) "background-Kopie-with-gradient")) )))
 			(gimp-layer-set-name (car (gimp-image-get-layer-by-name img (if (= inLanguage 0) "background copy-gradient" (if (= inLanguage 1) "background-Kopie-gradient")) )) "bg light")
@@ -249,7 +249,7 @@
 			(set! base-y (cadr (gimp-drawable-offsets base-layer)))
 			(set! base-width  (car (gimp-drawable-width  base-layer)))
 			(set! base-height (car (gimp-drawable-height base-layer)))
-			(python-layer-fx-gradient-overlay RUN-NONINTERACTIVE img varDupLayer (if (= inLanguage 0) "FG to BG (RGB)" (if (= inLanguage 1) "VG nach HG (RGB)")) GRADIENT-RADIAL REPEAT-NONE FALSE 100 NORMAL-MODE (- (+ base-x (/ base-width  2)) (/ 100  2)) (- (+ base-y (/ base-height 2)) (/ 100 2)) 90 (* (car (gimp-drawable-height varDupLayer)) 2.95) FALSE)
+			(python-layer-fx-gradient-overlay RUN-NONINTERACTIVE img varDupLayer (if (= inLanguage 0) "FG to BG (RGB)" (if (= inLanguage 1) "VG nach HG (RGB)")) GRADIENT-RADIAL REPEAT-NONE FALSE 100 0 (- (+ base-x (/ base-width  2)) (/ 100  2)) (- (+ base-y (/ base-height 2)) (/ 100 2)) 90 (* (car (gimp-drawable-height varDupLayer)) 2.95) FALSE)
 			(gimp-image-reorder-item img (car (gimp-image-get-layer-by-name img (if (= inLanguage 0) "background copy-gradient" (if (= inLanguage 1) "background-Kopie-gradient")) )) 0 -1)
 			(gimp-image-remove-layer img (car (gimp-image-get-layer-by-name img (if (= inLanguage 0) "background copy-with-gradient" (if (= inLanguage 1) "background-Kopie-with-gradient")) )))
 			(gimp-layer-set-name (car (gimp-image-get-layer-by-name img (if (= inLanguage 0) "background copy-gradient" (if (= inLanguage 1) "background-Kopie-gradient")) )) "cracks-mask")
@@ -300,13 +300,13 @@
 			(gimp-selection-shrink img 25)
 			(gimp-context-set-foreground '(0 0 0))
 			(gimp-edit-fill varDupLayer FOREGROUND-FILL)
-			(gimp-layer-set-mode varDupLayer NORMAL-MODE)
+			(gimp-layer-set-mode varDupLayer 0)
 			(gimp-layer-set-opacity varDupLayer 100)
 			(gimp-selection-none img)
 			(plug-in-gauss RUN-NONINTERACTIVE img varDupLayer 34 34 1)
 			(gimp-layer-set-name varDupLayer "fading effect 2")
 			
-			(plug-in-mblur RUN-NONINTERACTIVE img (car (gimp-image-get-layer-by-name img "fading effect 2")) LINEAR (/ (car (gimp-drawable-height varDupLayer)) 20) 90 (- (+ base-x (/ base-width  2)) (/ 100  2)) (- (+ base-y (/ base-height 2)) (/ 100 2)))
+			(plug-in-mblur RUN-NONINTERACTIVE img (car (gimp-image-get-layer-by-name img "fading effect 2")) 0 (/ (car (gimp-drawable-height varDupLayer)) 20) 90 (- (+ base-x (/ base-width  2)) (/ 100  2)) (- (+ base-y (/ base-height 2)) (/ 100 2)))
 			(gimp-layer-translate (car (gimp-image-get-layer-by-name img "fading effect 2")) 0 (/ (/ (car (gimp-drawable-height varDupLayer)) 20) 4) )
 		);; END "fading effect 2" layer
 
@@ -327,7 +327,7 @@
 		;;	Brightness/Contrast
 		;; ************************************************************************************************************************************
 		(gimp-edit-copy-visible img)
-		(set! brightness-contrast-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "Brightness/Contrast 001" 100 NORMAL)))
+		(set! brightness-contrast-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "Brightness/Contrast 001" 100 0)))
 		(gimp-image-insert-layer img brightness-contrast-layer 0 0)		
 		(set! floating-selection (car (gimp-edit-paste brightness-contrast-layer 0)))
 		(gimp-floating-sel-anchor floating-selection)
@@ -344,7 +344,7 @@
 			)
 			(gimp-image-insert-layer img varDupLayer 0 -1)
 			(gimp-context-set-foreground '(0 0 0))
-			(python-layer-fx-gradient-overlay RUN-NONINTERACTIVE img varDupLayer (if (= inLanguage 0) "FG to Transparent" (if (= inLanguage 1) "VG nach Transparent")) GRADIENT-LINEAR REPEAT-NONE TRUE 100 NORMAL-MODE (/ ImageWidth 2) (/ ImageHeight 2) 90 (* (car (gimp-drawable-height varDupLayer)) 0.95) FALSE)
+			(python-layer-fx-gradient-overlay RUN-NONINTERACTIVE img varDupLayer (if (= inLanguage 0) "FG to Transparent" (if (= inLanguage 1) "VG nach Transparent")) GRADIENT-LINEAR REPEAT-NONE TRUE 100 0 (/ ImageWidth 2) (/ ImageHeight 2) 90 (* (car (gimp-drawable-height varDupLayer)) 0.95) FALSE)
 			(gimp-image-reorder-item img (car (gimp-image-get-layer-by-name img (if (= inLanguage 0) "background copy-gradient" (if (= inLanguage 1) "background-Kopie-gradient")) )) 0 -1)
 			(gimp-image-remove-layer img (car (gimp-image-get-layer-by-name img (if (= inLanguage 0) "background copy-with-gradient" (if (= inLanguage 1) "background-Kopie-with-gradient")) )))
 			(gimp-layer-set-name (car (gimp-image-get-layer-by-name img (if (= inLanguage 0) "background copy-gradient" (if (= inLanguage 1) "background-Kopie-gradient")) )) "layer2 (tmp)")
@@ -429,7 +429,7 @@
 			)
 			(gimp-image-insert-layer img varDupLayer 0 -1)
 			(gimp-context-set-foreground '(0 0 0))
-			(python-layer-fx-gradient-overlay RUN-NONINTERACTIVE img varDupLayer (if (= inLanguage 0) "FG to Transparent" (if (= inLanguage 1) "VG nach Transparent")) GRADIENT-LINEAR REPEAT-NONE FALSE 100 NORMAL-MODE (/ ImageWidth 2) (/ ImageHeight 2) 90 (* (car (gimp-drawable-height varDupLayer)) 0.9) FALSE)
+			(python-layer-fx-gradient-overlay RUN-NONINTERACTIVE img varDupLayer (if (= inLanguage 0) "FG to Transparent" (if (= inLanguage 1) "VG nach Transparent")) GRADIENT-LINEAR REPEAT-NONE FALSE 100 0 (/ ImageWidth 2) (/ ImageHeight 2) 90 (* (car (gimp-drawable-height varDupLayer)) 0.9) FALSE)
 			(gimp-image-reorder-item img (car (gimp-image-get-layer-by-name img (if (= inLanguage 0) "background copy-gradient" (if (= inLanguage 1) "background-Kopie-gradient")) )) 0 1)
 			(gimp-image-remove-layer img (car (gimp-image-get-layer-by-name img (if (= inLanguage 0) "background copy-with-gradient" (if (= inLanguage 1) "background-Kopie-with-gradient")) )))
 			(gimp-layer-set-name (car (gimp-image-get-layer-by-name img (if (= inLanguage 0) "background copy-gradient" (if (= inLanguage 1) "background-Kopie-gradient")) )) "layer3 (tmp)")
@@ -869,7 +869,7 @@
 			(gimp-item-set-visible (car (gimp-image-get-layer-by-name img "layer11")) FALSE)
 			(gimp-item-set-visible (car (gimp-image-get-layer-by-name img "layer11 mask")) FALSE)
 			(gimp-layer-set-name varDupLayer "small Particles")
-			(python-layer-fx-outer-glow RUN-NONINTERACTIVE img (car (gimp-image-get-layer-by-name img "small Particles")) '(255 255 255) 75 0 0 NORMAL-MODE 0 6 FALSE FALSE)
+			(python-layer-fx-outer-glow RUN-NONINTERACTIVE img (car (gimp-image-get-layer-by-name img "small Particles")) '(255 255 255) 75 0 0 0 0 6 FALSE FALSE)
 		
 			;;	add copy masks from "bg light (wide)" layer
 			;; ************************************************************************************************************************************
@@ -953,7 +953,7 @@
 			(plug-in-gauss RUN-NONINTERACTIVE img varDupLayer 2 2 1)
 			
 			(gimp-layer-set-name varDupLayer "big Particles")
-			(python-layer-fx-outer-glow RUN-NONINTERACTIVE img (car (gimp-image-get-layer-by-name img "big Particles")) '(255 255 255) 75 0 0 NORMAL-MODE 0 8 FALSE FALSE)
+			(python-layer-fx-outer-glow RUN-NONINTERACTIVE img (car (gimp-image-get-layer-by-name img "big Particles")) '(255 255 255) 75 0 0 0 0 8 FALSE FALSE)
 		
 			;;	add copy masks from "bg light (wide)" layer
 			;; ************************************************************************************************************************************
@@ -970,7 +970,7 @@
 			(gimp-floating-sel-anchor floating-selection) ;; END add copy masks from "big Particles" layer
 			
 			(gimp-layer-set-opacity (car (gimp-image-get-layer-by-name img "big Particles-with-outerglow")) 90)
-			(gimp-layer-set-mode (car (gimp-image-get-layer-by-name img "big Particles-with-outerglow")) NORMAL-MODE)
+			(gimp-layer-set-mode (car (gimp-image-get-layer-by-name img "big Particles-with-outerglow")) 0)
 			
 			(gimp-selection-layer-alpha (car (gimp-image-get-layer-by-name img "layer3 (tmp)")))
 			(gimp-context-set-background '(0 0 0))
@@ -1074,7 +1074,7 @@
 		;;	Brightness/Contrast 002
 		;; ************************************************************************************************************************************
 		(gimp-edit-copy-visible img)
-		(set! brightness-contrast-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "Brightness/Contrast 002" 100 NORMAL)))
+		(set! brightness-contrast-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "Brightness/Contrast 002" 100 0)))
 		(gimp-image-insert-layer img brightness-contrast-layer 0 0)		
 		(set! floating-selection (car (gimp-edit-paste brightness-contrast-layer 0)))
 		(gimp-floating-sel-anchor floating-selection)
@@ -1086,7 +1086,7 @@
 		;;	Exposure (Softlight)
 		;; ************************************************************************************************************************************
 		(gimp-edit-copy-visible img)
-		(set! softlight-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "Exposure (Softlight)" 100 NORMAL)))
+		(set! softlight-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "Exposure (Softlight)" 100 0)))
 		(gimp-image-insert-layer img softlight-layer 0 0)		
 		(set! floating-selection (car (gimp-edit-paste softlight-layer 0)))
 		(gimp-floating-sel-anchor floating-selection)

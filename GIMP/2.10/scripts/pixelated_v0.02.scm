@@ -13,16 +13,16 @@
 ;	along with this program.  If not, see <http://www.gnu.org/licenses/>.								;;
 ;																										;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;	v0.01 Pixelated; Gimp v2.8.18																		;;
+;;	v0.02 Pixelated; Gimp v2.10																			;;
 ;;	(de)	http://www.3d-hobby-art.de/news/204-gimp-script-fu-pixelated-verpixelt.html					;;
 ;;	(eng)	http://www.3d-hobby-art.de/en/blog/205-gimp-script-fu-pixelated.html						;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (script-fu-register
 	"script-fu-pixelated"															;func name
-	"Pixelated! ..."																;menu label
+	"Pixelated! (free) ..."																;menu label
 	"This effect will break apart your photo into various sized pixel squares."		;desc
 	"Stephan W."
-	"Stephan Wittling; (c) 2016, 3d-hobby-art.de"									;copyright notice
+	"(c) 2016, 3d-hobby-art.de"									;copyright notice
 	"October 23, 2016"																;date created
 	"RGBA, RGB"																		;image type that the script works on
 	SF-IMAGE		"Image"						0
@@ -55,23 +55,23 @@
 			(old-fg (car (gimp-context-get-foreground)))
 			(ImageWidth  (car (gimp-image-width  img)))
 			(ImageHeight (car (gimp-image-height img)))
-			(small-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "small (tmp)" 100 NORMAL)))
-			(small-layer-pixels (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "small pixels (tmp)" 100 NORMAL)))
-			(medium-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "medium (tmp)" 100 NORMAL)))
-			(medium-layer-pixels (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "medium pixels (tmp)" 100 NORMAL)))
-			(large-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "large (tmp)" 100 NORMAL)))
-			(large-layer-pixels (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "large pixels (tmp)" 100 NORMAL)))
-			(very-large-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "very large (tmp)" 100 NORMAL)))
-			(very-large-layer-pixels (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "very large pixels (tmp)" 100 NORMAL)))
+			(small-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "small (tmp)" 100 0)))
+			(small-layer-pixels (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "small pixels (tmp)" 100 0)))
+			(medium-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "medium (tmp)" 100 0)))
+			(medium-layer-pixels (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "medium pixels (tmp)" 100 0)))
+			(large-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "large (tmp)" 100 0)))
+			(large-layer-pixels (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "large pixels (tmp)" 100 0)))
+			(very-large-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "very large (tmp)" 100 0)))
+			(very-large-layer-pixels (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "very large pixels (tmp)" 100 0)))
 			(pixel-group-small (car (gimp-layer-group-new img)))
 			(pixel-group-small-dodge (car (gimp-layer-group-new img)))
 			(pixel-group-medium (car (gimp-layer-group-new img)))
 			(pixel-group-large (car (gimp-layer-group-new img)))
 			(pixel-group-very-large (car (gimp-layer-group-new img)))
-			(small-parts-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "s1" 100 NORMAL)))
-			(medium-parts-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "m1" 100 NORMAL)))
-			(large-parts-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "l1" 100 NORMAL)))
-			(very-large-parts-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "vl1" 100 NORMAL)))
+			(small-parts-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "s1" 100 0)))
+			(medium-parts-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "m1" 100 0)))
+			(large-parts-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "l1" 100 0)))
+			(very-large-parts-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "vl1" 100 0)))
 			(small-overlay-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "grid pixel overlay (small)" 70 OVERLAY-MODE)))
 			(small-overlay-layer-mask)
 			(medium-overlay-layer (car (gimp-layer-new img ImageWidth ImageHeight RGBA-IMAGE "grid pixel overlay (medium)" 50 SCREEN-MODE)))

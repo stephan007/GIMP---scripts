@@ -13,16 +13,16 @@
 ;	along with this program.  If not, see <http://www.gnu.org/licenses/>.								;;
 ;																										;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;	v0.03 Mystical; Gimp v2.8.16																		;;
+;;	v0.04 Mystical; Gimp v2.10																			;;
 ;;	(de) http://www.3d-hobby-art.de/news/196-gimp-script-fu-mythical.html								;;
 ;;	(eng) http://www.3d-hobby-art.de/en/blog/197-gimp-script-fu-mythical.html							;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (script-fu-register
 	"script-fu-mythical"												;func name
-	"Mythical ..."														;menu label
+	"Mythical (free) ..."												;menu label
 	"Create awesome atmospheric lighting and Mystical effect."			;desc
 	"Stephan W."
-	"Stephan Wittling; (c) 2016, 3d-hobby-art.de"						;copyright notice
+	"(c) 2016, 3d-hobby-art.de"											;copyright notice
 	"Mai 30, 2016"														;date created
 	"RGBA , RGB"														;image type that the script works on
 	SF-IMAGE		"Image"						0
